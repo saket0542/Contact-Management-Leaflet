@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { configureStore } from "@reduxjs/toolkit";
+import "react-toastify/dist/ReactToastify.css";
+import { Provider } from "react-redux";
+import { contactReducer } from "./redux/Reducers/contactReducer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+const store = configureStore({
+  reducer: contactReducer,
+  devTools: true // Enable Redux DevTools Extension
+});
+
+const rootElement = document.getElementById("root");
+ReactDOM.createRoot(rootElement).render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
