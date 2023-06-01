@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Contact-Management-Leaflet/static/css/main.85e90afd.css",
+    "main.js": "/Contact-Management-Leaflet/static/js/main.eaf56661.js",
+    "index.html": "/Contact-Management-Leaflet/index.html",
+    "main.85e90afd.css.map": "/Contact-Management-Leaflet/static/css/main.85e90afd.css.map",
+    "main.eaf56661.js.map": "/Contact-Management-Leaflet/static/js/main.eaf56661.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85e90afd.css",
+    "static/js/main.eaf56661.js"
+  ]
+}
